@@ -1,17 +1,19 @@
 package com.example.lambda.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
-@Data
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+@Table(name="Employee")
 public class Employee {
 
     @Id
@@ -19,8 +21,10 @@ public class Employee {
     private String employeeId;
     @Column(name="employeeName")
     private String employeeName;
-    @Column(name="salary")
-    private Double salary;
+    @Column(name="employeeAge")
+    private Integer employeeAge;
+    @Column(name="employeeSalary")
+    private Double employeeSalary;
 
 
 }
